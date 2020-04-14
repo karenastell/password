@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 2px solid darkgrey;
+    padding: 20px;
+}
+body {
+    background-color: lightgray;
+}
+
+main {
+    background-color: lightgoldenrodyellow;
+    padding-bottom: 100px;
+}
+.passwordDisplay {
+    padding:20px 10px 100px 10px;
+    border: 2px dotted darkgray;
+    color: darkgray;
+    text-align: center;
+    border-bottom: 2px solid darkgrey;
+}
