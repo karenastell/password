@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon"
+        href="https://www.dlf.pt/dfpng/middlepng/273-2735299_transparent-login-icons-png-key-password-icon-png.png">
 </head>
 
 <body>
@@ -19,14 +23,18 @@
         <section>
             <h4 class="passwordDisplay">Your Secure Password</h4>
         </section>
+        <section class="buttonArea">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+        </section>
 
     </main>
 
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
