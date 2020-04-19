@@ -18,7 +18,10 @@ body {
 
 .new-password {
     padding: 30px 10px;
+    letter-spacing: 2px;
     font-size: 20px;
+    color: black;
+
 }
 .passwordDisplay {
     padding:20px 10px;

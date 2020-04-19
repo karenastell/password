@@ -1,5 +1,5 @@
 
-var newPassword = document.querySelector(".new-password");
+var newPasswordElement = document.querySelector(".new-password");
 var button = document.querySelector(".generate");
 
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -9,10 +9,12 @@ var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", 
 
 button.addEventListener("click", function (event) {
     event.preventDefault();
+
     var pwLength = prompt("How long would you like your password? (between 8-128 characters)");
-    // check password length is within parameters 
-    while (pwLength < 8 || pwLength > 128) {
-        length = prompt("Your password can be between 8-128 characters, please select password length");
+
+    // check password length is within parameters and only contains numbers
+    while (pwLength < 8 || pwLength > 128 || isNaN(pwLength)) {
+        pwLength = prompt("Your password can be between 8-128 characters, please select password length");
     }
     console.log(pwLength);
 
@@ -50,6 +52,7 @@ button.addEventListener("click", function (event) {
     console.log(passwordCharacters.length);
 
 
+    var password = [];
 
     // the number of times the loop runs is determined by the user's input of the desired password length (pwLength)
     for (var i = 0; i < pwLength; i++) {
@@ -59,10 +62,16 @@ button.addEventListener("click", function (event) {
         // takes the random number and assigns it to the character in the password array
         var character = passwordCharacters[randomIndex];
         console.log(character);
-        var password = [];
-        password[i] = character;
-        console.log(password);
+
+        while (password.lastIndexOf(randomIndex) !== -1) {
+            randomIndex = Math.floor(Math.random() * passwordCharacters.length);
+        }
+        password.push(character);
+
     };
+    var displayedPassword = password.join("");
+
+    newPasswordElement.textContent = displayedPassword;
 
 });
 
