@@ -1,8 +1,8 @@
-h1 {
+.center {
     text-align: center;
 }
 
-h2 {
+.border-padding {
     border-bottom: 2px solid darkgrey;
     padding: 20px;
 }
@@ -11,12 +11,12 @@ body {
     font-family: 'Teko', sans-serif;
 }
 
-main {
+.background {
     background-color: lightgoldenrodyellow;
     padding-bottom: 20px;
 }
 
-p {
+.new-password {
     padding: 30px 10px;
     font-size: 20px;
 }
@@ -41,3 +41,4 @@ p {
 .check-label {
     padding-left: 20px;
 }
+
