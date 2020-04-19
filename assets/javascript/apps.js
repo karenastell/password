@@ -6,17 +6,18 @@ while (pwLength < 8 || pwLength > 128) {
 }
 console.log(pwLength);
 
+// user chooses which characters to use
 var wantNumbers = confirm("Do you want it to contain numbers?");
-console.log(wantNumbers);
+// console.log(wantNumbers);
 
 var wantUpperCase = confirm("Do you want it to contain upper case letters?");
-console.log(wantUpperCase);
+// console.log(wantUpperCase);
 
 var wantLowerCase = confirm("Do you want it to contain lower case letters?");
-console.log(wantLowerCase);
+// console.log(wantLowerCase);
 
 var wantSpecialCharacters = confirm("Do you want it to contain special characters?");
-console.log(wantSpecialCharacters);
+// console.log(wantSpecialCharacters);
 
 
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -24,7 +25,7 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", ">", "<", ".", ","];
 
-
+// clears arrays when the user does not choose to use those character types
 if (wantNumbers === false) {
     numbers = [];
 };
@@ -39,32 +40,20 @@ if (wantSpecialCharacters === false) {
 }
 
 
-
+// concatenates the arrays
 var password = numbers.concat(upperCase, lowerCase, specialCharacters);
 console.log(password);
 console.log(password.length);
 
-// for (var i = 0; i === password.length; i++) {
-
-// ramdonly chooses a number between 0-3
-var randomIndex = Math.floor(Math.random() * password.length);
-console.log(randomIndex);
-// takes the random number and assigns it to Rock, Paper or Scissors
-var pass = password[randomIndex];
-console.log(pass);
-
-
-    // var randNum = Math.floor(randNum);
-    // var randNum = Math.floor(Math.random() * password.length);
-    // console.log(randNum);
-    // console.log(password[randNum]);
-    //var newPassword = password[randNum];
-    //console.log(newPassword);
-// };
-//     // round down to the nearest integer
-
-//   
-// }
+// the number of times the loop runs is determined by the user's input of the desired password length (pwLength)
+for (var i = 0; i < pwLength; i++) {
+    // ramdonly chooses a number between 0 - password.length
+    var randomIndex = Math.floor(Math.random() * password.length);
+    // console.log(randomIndex);
+    // takes the random number and assigns it to the character in the password array
+    var pass = password[randomIndex];
+    console.log(pass);
+};
 
 
 
