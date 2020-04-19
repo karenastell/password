@@ -33,3 +33,11 @@ p {
     padding-top: 20px;
     border-top: 2px solid darkgrey;
 }
+
+.checkbox {
+    height: 30px;
+}
+
+.check-label {
+    padding-left: 20px;
+}
